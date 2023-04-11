@@ -119,3 +119,13 @@ The exact steps vary device-to-device, but here is a generalised guide:
 5. Locate the certificate file `ca.pem` on your SD Card/Internal Storage using the file manager.
 6. Select to load it.
 7. Done!
+
+
+# Cert és kulcs konvertálása pembe:
+
+```sh
+openssl x509 -in bakterInt.crt -out cert.pem -outform PEM
+```
+```sh
+openssl rsa -in bakterInt_nopass.key -text > cert-key.pem
+```
